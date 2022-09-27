@@ -3,10 +3,6 @@
 
 # Resume
 
-
-## Demo
-### UI
-
 ## Authors
 
 - [@rajkgrg2](https://github.com/rajkgrg2)
