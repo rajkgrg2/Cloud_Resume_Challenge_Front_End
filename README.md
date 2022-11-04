@@ -22,8 +22,7 @@ This project is fron-end part of cloud resume challenge. The goal is to host sim
 
 
 # Full Application Architecture Diagram.
-![backend](https://user-images.githubusercontent.com/7123198/199877566-56d2ac4c-0eb4-4f15-bcb4-9142bc04c93e.png)
-
+![backend](https://user-images.githubusercontent.com/7123198/199879632-6921c837-0377-4d90-9e60-9079ee78d24a.png)
 ## Authors
 
 - [@rajkgrg2](https://github.com/rajkgrg2)
