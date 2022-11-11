@@ -34,15 +34,19 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-"use strict";
-
-$(document).ready(() => {
-    $.post('https://tmt6d26h1g.execute-api.us-east-1.amazonaws.com/Prod/visit')
-    .done(visitor_counter => {
-        $('#visits').text(visitor_counter);
+function updateCounter(){
+    fetch(' https://io5zpc5wog.execute-api.us-east-1.amazonaws.com/PROD/resume',{
+        method: 'GET'
     })
-    .fail(e => {
-        console.log('Error');
-        console.log(e);
-    });
-});
+  .then(response => {
+    if (
+        // check 200 in response
+        response.ok
+    ) {
+      return response.json()
+    } else {
+      throw new Error('ERROR');
+    }
+  })
+  .then(data => document.getElementById("number").innerText = data.Visit_Count)
+}
