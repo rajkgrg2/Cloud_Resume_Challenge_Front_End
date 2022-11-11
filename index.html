@@ -55,7 +55,27 @@
                         <a class="social-icon" href="https://github.com/rajkgrg2"><i class="fab fa-github"></i></a>
                        
                        <!-- <div id="visitors" class="visitors"> Visitors: <span id="visits"></span><span id="loader" class="loader"></span></div> -->
-                          Visits: <span id="hits"></span>
+                     <div <body onload="updateCounter()">
+                            <script>
+                       function updateCounter(){
+                              fetch(' https://io5zpc5wog.execute-api.us-east-1.amazonaws.com/PROD/resume',{
+                                 method: 'GET'
+                                         })
+                          .then(response => {
+             if (
+        // check  200 status
+        response.ok
+    ) {
+      return response.json()
+    } else {
+      throw new Error('something went wrong');
+    }
+  })
+  .then(data => document.getElementById("number").innerText = data.Visit_Count)
+}
+</script>
+    Visits: <span id="number"></span>
+                    </div>
                        
                     </div>
                 </div>
