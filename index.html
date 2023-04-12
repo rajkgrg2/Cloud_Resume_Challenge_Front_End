@@ -56,29 +56,11 @@
                         <a class="social-icon" href="https://www.linkedin.com/in/raj-kumar-gurung-b8199623a/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/rajkgrg2"><i class="fab fa-github"></i></a>
                        
-                       <!-- <div id="visitors" class="visitors"> Visitors: <span id="visits"></span><span id="loader" class="loader"></span></div> -->
+                       <div id="visitors" class="visitors"> Visitors: <span id="visits"></span><span id="loader" class="loader"></span></div>
                         
-                                  
-                                         <body onload="updateCounter()">
-                        <script>
-                    function updateCounter(){
-                        fetch('https://miawz5fye3.execute-api.us-east-1.amazonaws.com/Prod/hello',{
-                            method: 'GET'
-                        })
-                      .then(response => {
-                        if (
-                            // check if response's status is 200
-                            response.ok
-                        ) {
-                          return response.json()
-                        } else {
-                          throw new Error('error');
-                        }
-                      })
-                      .then(data => document.getElementById("hits").innerText = data.Visit_Count)
-                    }
-                    </script>
-                        Visits: <span id="hits"></span>
+                                 
+                       
+                        
                        
                        
                     </div>
@@ -169,7 +151,7 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
