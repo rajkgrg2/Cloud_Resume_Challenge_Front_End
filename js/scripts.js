@@ -34,19 +34,17 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-function updateCounter(){
-    fetch(' https://io5zpc5wog.execute-api.us-east-1.amazonaws.com/PROD/resume',{
-        method: 'GET'
-    })
-  .then(response => {
-    if (
-        // check 200 in response
-        response.ok
-    ) {
-      return response.json()
-    } else {
-      throw new Error('ERROR');
-    }
-  })
-  .then(data => document.getElementById("number").innerText = data.Visit_Count)
-}
+'use strict';
+		$(document).ready(() => {
+		    $.post('https://uwvily6ly6.execute-api.us-east-1.amazonaws.com/DEV/')
+		    .done(visitor_counter => {
+		        $('#loader').hide();
+			  const data = JSON.parse(visitor_counter.body);
+        $('#visits').text(data.visit_count);
+		        
+		    })
+		    .fail(e => {
+		        console.log('Error');
+		        console.log(e);
+		    });
+		});
